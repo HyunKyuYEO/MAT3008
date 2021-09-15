@@ -17,9 +17,8 @@
   - 이미 존재하는 matrix에 새로운 pointer를 배정하는 submatrix()
   - C로 존재하는 matrix를 해당 recipe에서 사용하는 방식으로 바꿔주는 convert_matrix()
 
-  
 
-  
+
 
 ## 문제풀이
 
