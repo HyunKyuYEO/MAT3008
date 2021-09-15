@@ -39,6 +39,8 @@
 
   gcc: 7.5.0
 
+
+
 ### problem 3.6
 
 - 두 가지 방법으로 approximation 진행
@@ -214,6 +216,10 @@ Relative approximate error: -1.056486e-06
 
 
 
+
+
+
+
 ### problem 3.7
 
 - x = 0.577일 때 
@@ -264,6 +270,10 @@ denominator of digit-4: 0.000000
 
 
 
+
+
+
+
 ### problem 4.5
 
 - 수식 생성이 어려워서 결과값을 구해서 진행. 
@@ -282,11 +292,13 @@ denominator of digit-4: 0.000000
 
 
 
+
+
+
+
 ### problem 4.12
 
 - 미분식은 직접 구해서, 코드로 나타냄.
-
-
 
 #### 결과
 
