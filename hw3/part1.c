@@ -28,7 +28,7 @@ void part1()
     int nb = max_roots;
     float xb1[max_roots], xb2[max_roots], root;
 
-    printf("Part1: Find the roots of the Bessel function J0 using the following methods\n\n");
+    printf("Part1: Find the roots of the Bessel function J0 using the following methods\n");
     zbrak(bessj0, x1, x2, diff, xb1, xb2, &nb);
 
     printf("======Bisection(rtbis.c)======\n");

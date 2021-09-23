@@ -6,7 +6,7 @@ float muller(float (*func)(float), float x1, float x2, float xacc)
 {
     void nrerror(char error_text[]);
     int j, sum = 0;
-    float h0, h1, d0, d1, a, b, c, rad, f0, f1, f2, fmid, den, xr, dxr;
+    float h0, h1, d0, d1, a, b, c, rad, f0, f1, f2, den, xr, dxr;
     float xx1, xx0, xx2;
 
     xx2 = x1 + (x2 - x1) / 2;
