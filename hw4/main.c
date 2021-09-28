@@ -3,6 +3,8 @@
 
 void part1();
 void part2();
+void part3();
+
 void nrerror(char error_text[])
 /* Numerical Recipes standard error handler */
 {
@@ -16,4 +18,7 @@ int main()
 {
     part1();
     part2();
+    part3();
+
+    return 0;
 }
