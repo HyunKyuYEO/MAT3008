@@ -5,7 +5,7 @@
 float muller(float (*func)(float), float x1, float x2, float xacc)
 {
     void nrerror(char error_text[]);
-    int j, sum = 0;
+    int j;
     float h0, h1, d0, d1, a, b, c, rad, f0, f1, f2, den, xr, dxr;
     float xx1, xx0, xx2;
 
@@ -15,7 +15,6 @@ float muller(float (*func)(float), float x1, float x2, float xacc)
 
     for (j = 1; j <= MAXIT; j++)
     {
-        sum++;
         h0 = xx1 - xx0;
         h1 = xx2 - xx1;
         f1 = (*func)(xx1);
@@ -41,7 +40,7 @@ float muller(float (*func)(float), float x1, float x2, float xacc)
 
         if (fabs(dxr) < xacc * xr || j >= MAXIT)
         {
-            printf("반복문 횟수: %d\n", sum);
+            printf("반복 횟수: %d\n", j - 1);
             return xr;
         }
         xx0 = xx1;

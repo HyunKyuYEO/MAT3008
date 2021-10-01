@@ -1,11 +1,11 @@
-#include<stdio.h>
+#include <stdio.h>
 #include <math.h>
 #define MAXIT 1000
 
 float rtsec(float (*func)(float), float x1, float x2, float xacc)
 {
 	void nrerror(char error_text[]);
-	int j, sum = 0;
+	int j;
 	float fl, f, dx, swap, xl, rts;
 
 	fl = (*func)(x1);
@@ -25,7 +25,6 @@ float rtsec(float (*func)(float), float x1, float x2, float xacc)
 	}
 	for (j = 1; j <= MAXIT; j++)
 	{
-		sum++;
 		dx = (xl - rts) * f / (f - fl);
 		xl = rts;
 		fl = f;
@@ -33,7 +32,7 @@ float rtsec(float (*func)(float), float x1, float x2, float xacc)
 		f = (*func)(rts);
 		if (fabs(dx) < xacc || f == 0.0)
 		{
-			printf("반복문 횟수: %d\n", sum);
+			printf("반복 횟수: %d\n", j - 1);
 			return rts;
 		}
 	}

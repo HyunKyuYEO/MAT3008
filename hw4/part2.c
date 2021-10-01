@@ -71,7 +71,7 @@ void part2()
 
     printf("\n");
 
-    printf("==================Newton-Rhpason(rtnewt.c)===================\n");
+    printf("==================Newton-Raphson(rtnewt.c)===================\n");
     for (i = 1; i <= nb; i++)
     {
         root = rtnewt(func_final2, xb1[i], xb2[i], xacc1);

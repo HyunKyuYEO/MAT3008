@@ -5,7 +5,7 @@
 float rtbis(float (*func)(float), float x1, float x2, float xacc)
 {
 	void nrerror(char error_text[]);
-	int j, sum = 0;
+	int j;
 	float dx, f, fmid, xmid, rtb;
 
 	f = (*func)(x1);
@@ -15,13 +15,12 @@ float rtbis(float (*func)(float), float x1, float x2, float xacc)
 	rtb = f < 0.0 ? (dx = x2 - x1, x1) : (dx = x1 - x2, x2);
 	for (j = 1; j <= JMAX; j++)
 	{
-		sum++;
 		fmid = (*func)(xmid = rtb + (dx *= 0.5));
 		if (fmid <= 0.0)
 			rtb = xmid;
 		if (fabs(dx) < xacc || fmid == 0.0)
 		{
-			printf("반복문 횟수: %d\n", sum);
+			printf("반복 횟수: %d\n", j - 1);
 			return rtb;
 		}
 	}

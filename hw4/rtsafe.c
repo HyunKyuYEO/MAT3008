@@ -6,7 +6,7 @@ float rtsafe(void (*funcd)(float, float *, float *), float x1, float x2,
 			 float xacc)
 {
 	void nrerror(char error_text[]);
-	int j, sum = 0;
+	int j;
 	float df, dx, dxold, f, fh, fl;
 	float temp, xh, xl, rts;
 
@@ -34,7 +34,6 @@ float rtsafe(void (*funcd)(float, float *, float *), float x1, float x2,
 	(*funcd)(rts, &f, &df);
 	for (j = 1; j <= MAXIT; j++)
 	{
-		sum++;
 		if ((((rts - xh) * df - f) * ((rts - xl) * df - f) > 0.0) || (fabs(2.0 * f) > fabs(dxold * df)))
 		{
 			dxold = dx;
@@ -42,7 +41,7 @@ float rtsafe(void (*funcd)(float, float *, float *), float x1, float x2,
 			rts = xl + dx;
 			if (xl == rts)
 			{
-				printf("반복문 횟수: %d\n", sum);
+				printf("반복 횟수: %d\n", j - 1);
 				return rts;
 			}
 		}
@@ -54,13 +53,13 @@ float rtsafe(void (*funcd)(float, float *, float *), float x1, float x2,
 			rts -= dx;
 			if (temp == rts)
 			{
-				printf("반복문 횟수: %d\n", sum);
+				printf("반복 횟수: %d\n", j - 1);
 				return rts;
 			}
 		}
 		if (fabs(dx) < xacc)
 		{
-			printf("반복문 횟수: %d\n", sum);
+			printf("반복 횟수: %d\n", j - 1);
 			return rts;
 		}
 		(*funcd)(rts, &f, &df);
@@ -74,7 +73,7 @@ float rtsafe(void (*funcd)(float, float *, float *), float x1, float x2,
 }
 
 float rtsafe1(void (*funcd)(float, float *, float *), float x1, float x2,
-			 float xacc)
+			  float xacc)
 {
 	void nrerror(char error_text[]);
 	int j, sum = 0;
