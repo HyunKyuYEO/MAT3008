@@ -41,7 +41,7 @@ float rtsafe(void (*funcd)(float, float *, float *), float x1, float x2,
 			rts = xl + dx;
 			if (xl == rts)
 			{
-				printf("반복 횟수: %d\n", j - 1);
+				printf("iteration count: %d\n", j - 1);
 				return rts;
 			}
 		}
@@ -53,13 +53,13 @@ float rtsafe(void (*funcd)(float, float *, float *), float x1, float x2,
 			rts -= dx;
 			if (temp == rts)
 			{
-				printf("반복 횟수: %d\n", j - 1);
+				printf("iteration count: %d\n", j - 1);
 				return rts;
 			}
 		}
 		if (fabs(dx) < xacc)
 		{
-			printf("반복 횟수: %d\n", j - 1);
+			printf(": %d\n", j - 1);
 			return rts;
 		}
 		(*funcd)(rts, &f, &df);

@@ -45,7 +45,7 @@ float rtflsp(float (*func)(float), float x1, float x2, float xacc)
 		dx = xh - xl;
 		if (fabs(del) < xacc || f == 0.0)
 		{
-			printf("반복 횟수: %d\n", j - 1);
+			printf("iteration count: %d\n", j - 1);
 			return rtf;
 		}
 	}

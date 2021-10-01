@@ -1,3 +1,4 @@
+#define _USE_MATH_DEFINES
 #include <math.h>
 
 float function1_1(float x)

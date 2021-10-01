@@ -18,7 +18,7 @@ float rtnewt(void (*funcd)(float, float *, float *), float x1, float x2,
 			nrerror("Jumped out of brackets in rtnewt");
 		if (fabs(dx) < xacc)
 		{
-			printf("반목 횟수: %d\n", j - 1);
+			printf("iteration count: %d\n", j - 1);
 			return rtn;
 		}
 	}
