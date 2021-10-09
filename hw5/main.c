@@ -218,19 +218,30 @@ float *make_matrix2(FILE *f, int n, int m, float *b)
 
 int main(int argc, char **argv)
 {
-    float **a;
-    float *b;
+    float **a = NULL;
+    float *b = NULL;
     FILE *f[3];
     f[0] = fopen("data/lineq1.dat", "r");
     f[1] = fopen("data/lineq2.dat", "r");
     f[2] = fopen("data/lineq3.dat", "r");
     if (f[0] == NULL)
+    {
         fprintf(stderr, "fail to open %s\n", "data/lineq1.dat");
+        fclose(f[0]);
+        return 0;
+    }
     if (f[1] == NULL)
+    {
         fprintf(stderr, "fail to open %s\n", "data/lineq2.dat");
+        fclose(f[2]);
+        return 0;
+    }
     if (f[2] == NULL)
+    {
         fprintf(stderr, "fail to open %s\n", "data/lineq3.dat");
-
+        fclose(f[2]);
+        return 0;
+    }
     int n, m;
 
     for (int i = 0; i < 3; i++)
