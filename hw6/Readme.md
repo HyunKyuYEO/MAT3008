@@ -27,7 +27,7 @@ OS: window
 
 - 표본이 늘어날수록 더 잘 정돈된 형태를 확인할 수 있음. 
 
-  ![uniform](D:\development\Ubuntu_env\Numerica_Analysis\MAT3008\hw6\uniform.png)
+  ![uniform](./image/uniform.png)
 
 
 
@@ -36,7 +36,7 @@ OS: window
 - m, n을 맞추기 위해 `gasdev(&idum)*1.5 + 0.5`실행. m = 0.5, s = 1.5 성립함.
 - 표본이 늘어날수록 더 잘 정돈된 형태를 확인할 수 있음.  
 
-![uniform](D:\development\Ubuntu_env\Numerica_Analysis\MAT3008\hw6\gauss.png)
+![uniform](./image/gauss.png)
 
 
 
