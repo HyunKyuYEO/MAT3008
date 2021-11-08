@@ -32,7 +32,7 @@ int main() {
 		}
 		for (int j = 0; j < arr[i]; j++) {
 			fprintf(fp_uniform[i], "%f\n", fmod(ran1(&idum) * 100, 5) - 3);
-			fprintf(fp_gauss[i], "%f\n", gasdev(&idum)*1.5 + 0.5);
+			fprintf(fp_gauss[i], "%f\n", gasdev(&idum) * 1.5 + 0.5);
 		}
 		fclose(fp_uniform[i]);
 	}
