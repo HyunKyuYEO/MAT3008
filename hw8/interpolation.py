@@ -4,28 +4,31 @@ import numpy as np
 
 
 def bi_interpolation(image):
-    print("가로, 세로 배수를 입력하세요")
-    mul_x = float(input())
-    mul_y = float(input())
     height, width, channel = image.shape
+    print(width, height)
+    print("가로 크기를 입력하세요")
+    new_width = int(input())
+    print("세로 크기를 입력하세요")
+    new_height = int(input())
 
-    new_width = int(mul_x * width)
-    new_height = int(mul_y * height)
     new_img = np.full((new_height, new_width, 3), 255, dtype=np.uint8)
+    rate_width = new_width/width
+    rate_height = new_height/height
+    print(rate_width, rate_height)
 
-    for i in range(0, new_height-1):
-        for j in range(0, new_width-1):
-            origin_x = int(j/mul_x)
-            origin_y = int(i/mul_y)
+    for i in range(0, new_height):
+        for j in range(0, new_width):
+            origin_x = int(j/rate_width)
+            origin_y = int(i/rate_height)
 
-            dx1 = j / mul_x-origin_x
+            dx1 = j / rate_width - origin_x
             dx2 = 1 - dx1
-            dy1 = i / mul_y-origin_y
+            dy1 = i / rate_height - origin_y
             dy2 = 1 - dy1
 
             px1 = image[origin_y, origin_x]
-            px2 = image[origin_y + 1, origin_x]
-            px3 = image[origin_y, origin_x + 1]
+            px2 = image[origin_y, origin_x + 1]
+            px3 = image[origin_y + 1, origin_x]
             px4 = image[origin_y + 1, origin_x + 1]
 
             w1 = dx2 * dy2
