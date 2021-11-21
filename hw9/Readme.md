@@ -27,8 +27,10 @@
 
 ![expression](./img/expression.png)
 
-2. 위의 수식에 맞춰 matrix를 생성함. 코드에선, (A, para)이라는 이름으로 만듦. 
-   - (a1 ~ a6은 따로 생성하지 않음. para에 결과가 저장되기 때문이다.)
+2. 위의 수식에 맞춰 matrix를 생성함. 코드에선, A, para 2개의 matrix 생성. 
+   - (a1 ~ a6 matrix는 따로 생성하지 않음. para에 결과가 저장되기 때문이다.)
+   - A*x = para
+   - x의 값들이 para에 저장됨. 
 3. gaussj()함수를 활용해서 수식을 품.
 
 
