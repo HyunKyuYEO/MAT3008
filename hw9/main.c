@@ -46,6 +46,7 @@ void fitting(float** para, float* x, float* y, float* xp, float* yp, int N, int 
 	A[3][3] = N;
 
 	gaussj(A, M, para, K);
+
 }
 
 int main(int argc, char** argv)
@@ -94,7 +95,7 @@ int main(int argc, char** argv)
 		int a = 1;
 		for (int i = 1; i <= K; i++) {
 			for (int j = 1; j <= M; j++)
-				printf("a%d: %f\n", a++, para[i][j]);
+				printf("a%d: %f\n", a++, para[j][i]);
 		}
 
 		fclose(f[i]);
