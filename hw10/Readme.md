@@ -56,22 +56,22 @@
 
 ### initial state
 
-![](./result/initialstate.png)
+![1](./result/initialstate.png)
 
 
 
 ### with no noise
 
-![](./result/nonoise.png)
+![1](./result/nonoise.png)
 
 ### with noise SD = 1
 
-![](./result/SD1.png)
+![1](./result/sd1.png)
 
 ### with noise SD = 10
 
-![](./result/SD10.png)
+![1](./result/sd10.png)
 
 ### with noise SD = 20
 
-![](./result/SD20.png)
+![1](./result/sd20.png)
