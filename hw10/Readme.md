@@ -49,9 +49,10 @@
 ### parameter 결과
 
 - 초기 parameter a[a11, a12, a13, a21, a22, a23, a31, a32] = [1, 0, -1, 1, 1, 0, 0, 0]으로 설정했다.
-- iteration 후 결과는 아래와 같다. 배열 순서는 위에 줄과 같다.
+- iteration 후 결과는 아래와 같다. 배열 순서는  a[a11, a12, a13, a21, a22, a23, a31, a32] 이다.
+- iteration할 때마다, parameter의 값들이 동일한 간격으로 늘어남을 확인했다. 
 
-![image-20211206144940580](C:\Users\YEO\AppData\Roaming\Typora\typora-user-images\image-20211206144940580.png)
+![image-20211206144940580](./result/전체결과.png)
 
 ### initial state
 
@@ -69,7 +70,7 @@
 
 ### with noise SD = 10
 
-![](/result/SD=10__.png)
+![](./result/SD=10__.png)
 
 ### with noise SD = 20
 
