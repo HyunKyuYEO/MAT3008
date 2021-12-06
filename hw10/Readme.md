@@ -66,12 +66,12 @@
 
 ### with noise SD = 1
 
-![](./result/SD1.png)
+![](./result/sd1.png)
 
 ### with noise SD = 10
 
-![](./result/SD10.png)
+![](./result/sd10.png)
 
 ### with noise SD = 20
 
-![](./result/SD20.png)
+![](./result/sd20.png)
