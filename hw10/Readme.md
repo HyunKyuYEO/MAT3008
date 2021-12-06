@@ -38,16 +38,39 @@
 
 ## 결과
 
-- initial state
-
-  ![](/result/initial__.png)
-
-- with no noise
-
-​		![](/result/no noise__.PNG)
+- (x', y') 은 파란색으로 나타낸 점들이다.
+- (f(x, y), g(x, y))는 주황색 점들이다. 
+  - x' = f(x, y), y' = g(x, y) 
+- 초기값을 넣었을 때, 함수 결과는 유의미하지 않고, linear하다.
+- noise가 커질수록 좌우 transform의 형태가 무너지고 있음을 알 수 있다. 
 
 
 
-- with noise SD = 1
-- with noise SD = 10
-- with noise SD = 20
+### parameter 결과
+
+- 초기 parameter a[a11, a12, a13, a21, a22, a23, a31, a32] = [1, 0, -1, 1, 1, 0, 0, 0]으로 설정했다.
+- iteration 후 결과는 아래와 같다. 배열 순서는 위에 줄과 같다.
+
+![image-20211206144940580](C:\Users\YEO\AppData\Roaming\Typora\typora-user-images\image-20211206144940580.png)
+
+### initial state
+
+![](./result/initial__.png)
+
+
+
+### with no noise![](./result/no noise__.PNG)
+
+
+
+### with noise SD = 1
+
+![](./result/SD=1__.png)
+
+### with noise SD = 10
+
+![](./result/SD=10__.png)
+
+### with noise SD = 20
+
+![](./result/SD=20__.png)

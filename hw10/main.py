@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import random
+import copy
 
 
 def read_data():
@@ -132,47 +133,52 @@ def main():
     LMM(a, x, y, x_prime, y_prime)
 
     # random gaussian distribution
-    ran1_1 = random.gauss(0.0, 1)
-    ran1_2 = random.gauss(0.0, 1)
+    x_tem = copy.deepcopy(x)
+    y_tem = copy.deepcopy(y)
+    x_prime_tem = copy.deepcopy(x_prime)
+    y_prime_tem = copy.deepcopy(y_prime)
     a = [1, 0, -1, 1, 1, 0, 0, 0]
     print()
     print(a)
     for i in range(100):
-        x[i] += ran1_1
-        y[i] += ran1_1
-        x_prime[i] += ran1_2
-        y_prime[i] += ran1_2
+        x_tem[i] += random.gauss(0.0, 1)
+        y_tem[i] += random.gauss(0.0, 1)
+        x_prime_tem[i] += random.gauss(0.0, 1)
+        y_prime_tem[i] += random.gauss(0.0, 1)
     print("Result of noise (m = 0, SD = 1)")
-    LMM(a, x,y, x_prime, y_prime)
-
+    LMM(a, x_tem,y_tem, x_prime_tem, y_prime_tem)
 
     # random gaussian distribution
-    ran1_1 = random.gauss(0.0, 10)
-    ran1_2 = random.gauss(0.0, 10)
+    x_tem = copy.deepcopy(x)
+    y_tem = copy.deepcopy(y)
+    x_prime_tem = copy.deepcopy(x_prime)
+    y_prime_tem = copy.deepcopy(y_prime)
     a = [1, 0, -1, 1, 1, 0, 0, 0]
     print()
     print(a)
     for i in range(100):
-        x[i] += ran1_1
-        y[i] += ran1_1
-        x_prime[i] += ran1_2
-        y_prime[i] += ran1_2
+        x_tem[i] += random.gauss(0.0, 10)
+        y_tem[i] += random.gauss(0.0, 10)
+        x_prime_tem[i] += random.gauss(0.0, 10)
+        y_prime_tem[i] += random.gauss(0.0, 10)
     print("Result of noise (m = 0, SD = 10)")
-    LMM(a, x,y, x_prime, y_prime)
+    LMM(a, x_tem,y_tem, x_prime_tem, y_prime_tem)
 
    # random gaussian distribution
-    ran1_1 = random.gauss(0.0, 20)
-    ran1_2 = random.gauss(0.0, 20)
+    x_tem = copy.deepcopy(x)
+    y_tem = copy.deepcopy(y)
+    x_prime_tem = copy.deepcopy(x_prime)
+    y_prime_tem = copy.deepcopy(y_prime)
     a = [1, 0, -1, 1, 1, 0, 0, 0]
     print()
     print(a)
     for i in range(100):
-        x[i] += ran1_1
-        y[i] += ran1_1
-        x_prime[i] += ran1_2
-        y_prime[i] += ran1_2
+        x_tem[i] += random.gauss(0.0, 20)
+        y_tem[i] += random.gauss(0.0, 20)
+        x_prime_tem[i] += random.gauss(0.0, 20)
+        y_prime_tem[i] += random.gauss(0.0, 20)
     print("Result of noise (m = 0, SD = 20)")
-    LMM(a, x,y, x_prime, y_prime)
+    LMM(a, x_tem, y_tem, x_prime_tem, y_prime_tem)
 
 
 main()
