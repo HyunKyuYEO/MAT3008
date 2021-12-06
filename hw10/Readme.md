@@ -62,16 +62,16 @@
 
 ### with no noise
 
-![1](./result/nonoise.png)
+![1](./result/nonoise.PNG)
 
 ### with noise SD = 1
 
-![1](./result/sd1.png)
+![1](./result/sd1.PNG)
 
 ### with noise SD = 10
 
-![1](./result/sd10.png)
+![1](./result/sd10.PNG)
 
 ### with noise SD = 20
 
-![1](./result/sd20.png)
+![1](./result/sd20.PNG)
