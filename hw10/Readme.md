@@ -69,7 +69,7 @@
 
 ### with noise SD = 10
 
-![](./result/SD=10__.png)
+![](/result/SD=10__.png)
 
 ### with noise SD = 20
 
