@@ -56,7 +56,7 @@
 
 ### initial state
 
-![1](./result/initialstate.png)
+![1](./result/initialstate.PNG)
 
 
 
