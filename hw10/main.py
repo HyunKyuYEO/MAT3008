@@ -34,15 +34,6 @@ def get_chi_square(a, x, y, x_prime, y_prime):
     return chi_square_x, chi_square_y
 
 
-def get_error(a, x, y, x_prime, y_prime):
-    error_x = 0
-    error_y = 0
-    for i in range(100):
-        error_x += x_prime[i] - (son_x(a, x[i], y[i]) / mother(a, x[i], y[i]))
-        error_y += y_prime[i] - (son_y(a, x[i], y[i]) / mother(a, x[i], y[i]))
-    return error_x, error_y
-
-
 def partial_diff(a, i, x, y, x_y):
     if i == 0:
         return x / mother(a, x, y)
